@@ -10,7 +10,9 @@
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build"
+    "start": "serve -p 81 -s dist/spa",
+    "build": "quasar clean && quasar build",
+    "serve": "quasar serve"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "eslint": "^8.10.0",
+    "serve": "^14.1.2",
     "eslint-plugin-vue": "^9.0.0",
     "eslint-config-prettier": "^8.1.0",
     "prettier": "^2.5.1",
